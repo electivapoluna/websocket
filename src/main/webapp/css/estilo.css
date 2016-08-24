@@ -1,98 +1,102 @@
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 body {
-	padding-top: 2em;
-	background-color: #ededed;
-	color: #333;
-	text-align: center;
-	margin: 0 auto;
-	font-family: sans-serif;
+    padding-top: 2em;
+    background-color: #ededed;
+    color: #333;
+    text-align: center;
+    margin: 0 auto;
+    font-family: sans-serif;
 }
 ul, li {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	font-size: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
 }
 #tablero {
-	width: 312px;
-	margin: 0 auto;
+    width: 312px;
+    margin: 0 auto;
 }
 li {
-	display: inline-block;
+    display: inline-block;
 }
 .celda {
-	border: 2px solid #777;
-	margin: 2px;
-	background: #fff;
-	height: 100px;
-	width: 100px;
-	font-size: 100px;
-	text-align: center;
-	display: inline-block;
-	vertical-align: top;
+    border: 2px solid #777;
+    margin: 2px;
+    background: #fff;
+    height: 100px;
+    width: 100px;
+    font-size: 100px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
 }
 .celda-marcado-x {
-	background-color: #dfdd24;
+    background-color: #dfdd24;
 }
 .celda-marcado-o {
-	background-color: #0ea64b;
+    background-color: #0ea64b;
 }
 
 .celda.marcable:hover {
-	background-color: #b2f2f9;
+    background-color: #b2f2f9;
 }
 .resultado {
-	font-weight: bold;
-	font-size: 30px;
-	margin: 40px auto;
-	display: block;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 40px auto;
+    display: block;
 }
 
 .jugador-x {
-	border: 2px solid #777;
-	margin: 2px;
-	background-color: #dfdd24;
-	height: 50px;
-	width: 50px;
-	display: inline-block;
-	vertical-align: middle;
+    border: 2px solid #777;
+    margin: 2px;
+    background-color: #dfdd24;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .jugador-o {
-	border: 2px solid #777;
-	margin: 2px;
-	background-color: #0ea64b;
-	height: 50px;
-	width: 50px;
-	display: inline-block;
-	vertical-align: middle;
+    border: 2px solid #777;
+    margin: 2px;
+    background-color: #0ea64b;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .btn {
-	border: none;
-	border-radius: 10px;
-	font-size: 20px;
-	color: #fff;
-	padding: 10px 20px;
-	cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 .btn-naranja {
-	background-color: #f14e08;
+    background-color: #f14e08;
 }
 
 .btn-verde {
-	background-color: #31bd00;
+    background-color: #31bd00;
 }
 
 .campo-entrada {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 #info-turno {
-	font-size: 20px;
-	display: inline-block;
+    font-size: 20px;
+    display: inline-block;
+}
+
+#info-usuario {
+    font-size: 25px;
 }
