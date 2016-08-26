@@ -18,7 +18,7 @@
         <div id="info-usuario"></div>
         <div id="lista-usuarios"></div>
         <script src="./jquery/jquery-3.1.0.min.js"></script>
-        <script src="./js/websocket.js"></script>
+        <script src="./js/conexion.js"></script>
         <script src="./js/usuario.js"></script>
         <script src="./js/control_usuario.js"></script>
     </body>
