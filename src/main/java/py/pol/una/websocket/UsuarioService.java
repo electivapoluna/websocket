@@ -36,14 +36,15 @@ public class UsuarioService {
     public void onClose(Session sesion) throws IOException {
         System.out.println(sesion.getId() + " conexión cerrada");
         Usuario usuario = usuarios.get(sesion);
-        /* if (usuario != null) { // Si no esta registrado
+        // Notificar que el usuario cerro su sesion a todos sus oponentes
+        /*
+        if (usuario != null) { // Si no esta registrado
             Set<Session> oponentes = Partidas.jugadores.get(sesion);
             if (oponentes != null) { // Si no tiene oponentes
                 for (Session oponente : oponentes) {
                     Partidas.jugadores.get(oponente).remove(sesion);
                 }
                 for (Map.Entry<String, Jugador[]> entry : Partidas.partidas.entrySet()) {
-                    System.out.println("Entro para eliminar notificar las partidas");
                     String clave = entry.getKey();
                     Jugador[] jugadores = entry.getValue();
                     boolean existe = false;
@@ -56,13 +57,16 @@ public class UsuarioService {
                         for (Jugador jugador : jugadores) {
                             JSONObject respuesta = new JSONObject();
                             respuesta.put("tipo", "sesion-cerrada");
-                            jugador.getSesion().getBasicRemote().sendText(respuesta.toJSONString());
+                            if (jugador.getSesion().isOpen()) {
+                                jugador.getSesion().getBasicRemote().sendText(respuesta.toJSONString());
+                            }
+
                         }
                     }
                 }
 
             }
-        } */
+        }*/
         Partidas.jugadores.remove(sesion);
         usuarios.remove(sesion);
         this.enviarListaUsuarios(); // actualizar la lista de usuarios conectados

@@ -96,7 +96,7 @@ function Tablero() {
                     $(window).off('beforeunload')
                     break
                 case 'sesion-cerrada':
-                    alert('Juego bloqueado, un usuario cerró su sesión')
+                    alert('Juego bloqueado, un usuario cerro su sesion')
                     $('.marcable').off('click')
                     $(window).off('beforeunload')
                     break
